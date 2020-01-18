@@ -3,7 +3,7 @@
 |Facebook|`[0-9]{8}_[0-9]{15,16}_[0-9]{18,19}_[on]`|
 |Facebook (App)|`FB_IMG_[0-9]{13}`|
 |Messenger|`received_[0-9]{15}`|
-|WhatsApp|`IMG-[0-9]{8}-WA{4}`|
+|WhatsApp|`IMG-[0-9]{8}-WA[0-9]{4}`|
 |Twitter|`[a-zA-Z0-9_-]{14}`|
 |Github|`[a-f0-9]{72}`|
 |DeviantArt|`.*_by_.*`|
