@@ -14,7 +14,7 @@
 |Telegram (Phone)|`IMG_[0-9]{8}_[0-9]{6}_[0-9]{3}`|
 |Weibo|`[a-z0-9]{32}`|
 |Pinterest|`[a-f0-9]{32}--.*`|
-|Tumblr|`tumblr_[a-f0-9]{8}_7736c6ab_1280`|
+|Tumblr|`tumblr_[a-f0-9]{8}_{a-f0-9}{8}_[0-9]{4}`|
 |VK|`[a-zA-Z0-9]{11}`|
 |Google|`images`|
 |LinkedIn|`0`|
