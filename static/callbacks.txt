@@ -1,0 +1,12 @@
+callback
+cb
+jsonp
+jsonpcallback
+jsonpcb
+jsonp_cb
+json
+jsoncallback
+jcb
+call
+cb_
+_cb_
