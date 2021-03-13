@@ -3,6 +3,7 @@
 This repository contains dead/unfinished projects, small scripts or stuff that doesn't deserve a repository of its own.
 
 ### Contents
+- [tweetad](https://github.com/s0md3v/dump/tree/master/tweetad) : tiny script that lets you dump promoted hashtags from twitter
 - [wl](https://github.com/s0md3v/dump/tree/master/wl) : wordlist case conversion tool
 - **Static files**
     - [nvd-dump](https://github.com/s0md3v/dump/tree/master/static/nvd-dump) : a list of all softwares that have a CVE (and cpe), also the command to generate the data
@@ -11,3 +12,4 @@ This repository contains dead/unfinished projects, small scripts or stuff that d
     - [file_signatures.json](https://github.com/s0md3v/Dump/blob/master/static/file-signatures.json) : filesignatures.net's 519 file signatures converted to JSON.
 - **Unfinished/Dead Projects**
     - [Infinity](https://github.com/s0md3v/Dump/tree/master/infinity) : [Doesn't work anymore] Find phone number of any Facebook user.
+    - [squint](https://github.com/s0md3v/dump/tree/master/squint) : Unfinisedh project that could help reading pixelated text.
