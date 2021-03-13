@@ -15,7 +15,7 @@ Usage of wl:
 
 ### Supported styles
 
-> Note: You don't need to use the words `foo` and `bar`, any word e.g. `prod_api_id` will work. `wl` will detect the casing style of your word and apply it to your wordlist. This can handy in changing your wordlist according to the input recieved from another tool.
+> Note: You don't need to use the words `foo` and `bar`, any word e.g. `prod_api_id` will work. `wl` will detect the casing style of your word and apply it to your wordlist. This can be handy in cases like changing your wordlist according to the input recieved from another tool.
 
 #### Popular
 `foobar, foo_bar, fooBar, FooBar, FOOBAR, FOO_BAR`
