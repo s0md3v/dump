@@ -71,6 +71,14 @@ func detectFooBar(fooBar string) (string, string) {
 func transform(parts []string, del string, casing string) string {
 	// combines list of strings to form a string with given casing style
 	str := ""
+	if len(parts) == 1 {
+		if casing == "l" {
+			return strings.ToLower(parts[0])
+		} else if casing == "u" {
+			return strings.ToUpper(parts[0])
+		}
+		return parts[0]
+	}
 	for i, part := range parts {
 		if casing == "l" {
 			str += add(strings.ToLower(part), del, i)
@@ -117,9 +125,9 @@ func handle(str string) []string {
 	return []string{str}
 }
 
-func start(inputStream io.Reader, outputStream io.Writer){
+func start(casing string, inputStream io.Reader, outputStream io.Writer) {
 	// main function that handles input, processing and output
-	del, casing := detectFooBar(os.Args[1])
+	del, casing := detectFooBar(casing)
 	scanner := bufio.NewScanner(inputStream)
 	for scanner.Scan() {
 		line := scanner.Text()
@@ -132,33 +140,33 @@ func start(inputStream io.Reader, outputStream io.Writer){
 }
 
 func main() {
-	style := flag.String("c", "", "casing style (required)")
+	casing := flag.String("c", "", "casing style (required)")
 	inputFile := flag.String("i", "", "input file (default stdin)")
 	outputFile := flag.String("o", "", "output file (default stdout)")
 	flag.Parse()
-	if *style != ""{
+	if *casing != "" {
 		outputStream := os.Stdout
-		if *outputFile != ""{
+		if *outputFile != "" {
 			file, err := os.OpenFile(*outputFile, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 			if err != nil {
-			    log.Fatal(err)
+				log.Fatal(err)
 			}
-		    outputStream = file
+			outputStream = file
 		}
-		if *inputFile != ""{
+		if *inputFile != "" {
 			inputStream, err := os.Open(*inputFile)
-		    if err != nil {
-		        log.Fatal(err)
-		    }
-		    defer inputStream.Close()
-		    start(inputStream, outputStream)
+			if err != nil {
+				log.Fatal(err)
+			}
+			defer inputStream.Close()
+			start(*casing, inputStream, outputStream)
 		} else {
 			fi, err := os.Stdin.Stat()
 			if err != nil {
 				panic(err)
 			}
-			if fi.Mode() & os.ModeNamedPipe != 0{
-				start(os.Stdin, outputStream)
+			if fi.Mode()&os.ModeNamedPipe != 0 {
+				start(*casing, os.Stdin, outputStream)
 			}
 		}
 	} else {
