@@ -12,18 +12,20 @@ interface, user = arg_parted[0], arg_parted[1]
 inactivity_threshold = 120 # seconds of inactivity to consider user offine
 last_connected = 1000 # dummy value for holding time we last connected to twitter
 last_status = 'offline'
+last_offline = 1000
 twitter_ip_range = '104.244.42.0/24' # IP range that twitter.com uses, as of now
 
 def online():
-    global last_status
+    global last_status, last_offline
     while True:
         time.sleep(3)
         if abs(int(time.time()) - last_connected) > inactivity_threshold:
             if last_status != 'offline':
                 last_status = 'offline'
+                last_offline = int(time.time())
                 print('user status changed, now offline')
                 os.system(f'sudo -u {user} python3 {sys.path[0]}/change.py offline')
-        elif last_status != 'online':
+        elif last_status != 'online' and (int(time.time()) - last_offline) > 30:
             last_status = 'online'
             print('user status changed, now online')
             os.system(f'sudo -u {user} python3 {sys.path[0]}/change.py online')
