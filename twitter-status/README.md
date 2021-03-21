@@ -2,9 +2,9 @@
 
 ## Setting up
 1. Install `selenium` and `scapy` python libraries. (or alternatively `python3-selenium` and `python3-scapy` packages)
-2. Download the latest [geckodriver](https://github.com/mozilla/geckodriver/releases), rename the downlaoded file it to `geckodriver` and put it in `/usr/bin`
-3. Find the interface you are going to monitor for twitter activity with `ifconfig` (or whatever you prefer)
-4. put two images with `offline` and `online` in their name in the same directory as `main.py`
+2. Download the latest [geckodriver](https://github.com/mozilla/geckodriver/releases), rename the downlaoded file to `geckodriver` and put it in `/usr/bin` directory
+3. Find the network interface you are going to monitor for twitter activity with `ifconfig` (or whatever you prefer)
+4. put two images with `offline` and `online` in their filename in the same directory as `main.py`
 
 ## Using it
 `sudo python3 main.py <interface name>@<non-root user>`
