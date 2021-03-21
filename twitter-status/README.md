@@ -1,3 +1,5 @@
+This is a hacky script that monitors your network activity and automatically changes your twitter profile picture according to your online/offline status.
+
 ![demo](/twitter-status/demo.png)
 
 ## Setting up
@@ -17,7 +19,7 @@ If you decide to change your twitter password, delete this file so it can be gen
 > Note: root is required to monitor the interface but a non-root user is required to run selenium.
 
 ## FAQ
-#### I am on windows, I don't have a `/usr/bin` direcotory.
+#### I am on windows, I don't have a `/usr/bin` directory.
 Google 'install geckodriver windows', once you are done setting it up, update both geckodriver paths in `change.py`
 #### I got an error or having a problem with this.
 [Create an issue](https://github.com/s0md3v/dump/issues/new)
