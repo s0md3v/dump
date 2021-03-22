@@ -20,7 +20,7 @@ Once this is done, you just need to run this script and it will do what its supp
 1. root is required to monitor the interface but a non-root user is required because selenium can't be run as root.
 2. If you stay inactive on twitter for 120 seconds, it will consider you offline. This threshold can be change by modifying the value of `inactivity_threshold` variable in `main.py`
 3. You can run `python3 change.py online` and `python3 change.py offline` to change the profile picture manually.
-4. If you decide to change your twitter password, delete this file so it can be generated again with a fresh login.
+4. If you decide to change your twitter password, delete the `cookies.json` file so it can be generated again with a fresh login.
 
 ## FAQ
 #### I am on windows, I don't have a `/usr/bin` directory.
