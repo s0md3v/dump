@@ -1,4 +1,4 @@
-This is a hacky script that monitors your network activity and automatically changes your twitter profile picture according to your online/offline status.
+This is a hacky script that monitors your network activity for twitter usage and changes your twitter profile picture according to your online/offline status.
 
 ![demo](/twitter-status/demo.png)
 
@@ -14,9 +14,13 @@ This is a hacky script that monitors your network activity and automatically cha
 For example: `sudo python3 main.py wlp0s20f3@s0md3v`
 
 When you run it for the first time, a browser window will open and it will ask you to login and once you do that, your cookies will be saved to a file named `cookies.json`.\
-If you decide to change your twitter password, delete this file so it can be generated again with a fresh login.
+Once this is done, you just need to run this script and it will do what its supposed to in the background.
 
-> Note: root is required to monitor the interface but a non-root user is required to run selenium.
+## Useful information
+1. root is required to monitor the interface but a non-root user is required because selenium can't be run as root.
+2. If you stay inactive on twitter for 120 seconds, it will consider you offline. This threshold can be change by modifying the value of `inactivity_threshold` variable in `main.py`
+3. You can run `python3 change.py online` and `python3 change.py offline` to change the profile picture manually.
+4. If you decide to change your twitter password, delete this file so it can be generated again with a fresh login.
 
 ## FAQ
 #### I am on windows, I don't have a `/usr/bin` directory.
