@@ -3,6 +3,9 @@ This is a hacky script that monitors your network activity for twitter usage and
 ![demo](/twitter-status/demo.png)
 
 ## Setting up
+
+> Note: If you are on windowss, scroll down to the FAQ section for general directions about how to get this working on windows.
+
 1. Install `selenium` and `scapy` python libraries. (or alternatively `python3-selenium` and `python3-scapy` packages)
 2. Download the latest [geckodriver](https://github.com/mozilla/geckodriver/releases), rename the downlaoded file to `geckodriver` and put it in `/usr/bin` directory
 3. Find the network interface you are going to monitor for twitter activity with `ifconfig` (or whatever you prefer)
@@ -23,7 +26,11 @@ Once this is done, you just need to run this script and it will do what its supp
 4. If you decide to change your twitter password, delete the `cookies.json` file so it can be generated again with a fresh login.
 
 ## FAQ
-#### I am on windows, I don't have a `/usr/bin` directory.
-Google 'install geckodriver windows', once you are done setting it up, update both geckodriver paths in `change.py`
+#### I am on windows, how do I get this to run?
+These are general directions, you will need to improvise as needed.
+
+1. Search 'install geckodriver windows' on google, once you are done setting it up, update both geckodriver paths in `change.py`.
+2. In linux, to run a command as another user you enter this in your terminal: `sudo -u username <command>`. This might be different in Windows, find out how it should be change the commands in `main.py` in `online()` function.
+
 #### I got an error or having a problem with this.
 [Create an issue](https://github.com/s0md3v/dump/issues/new)
