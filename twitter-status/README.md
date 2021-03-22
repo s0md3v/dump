@@ -30,7 +30,7 @@ Once this is done, you just need to run this script and it will do what its supp
 These are general directions, you will need to improvise as needed.
 
 1. Search 'install geckodriver windows' on google, once you are done setting it up, update both geckodriver paths in `change.py`.
-2. In linux, to run a command as another user you enter this in your terminal: `sudo -u username <command>`. This might be different in Windows, find out how it should be change the commands in `main.py` in `online()` function.
+2. In linux, you do this to execute a command as another user: `sudo -u username <command>`. This might be different in Windows, find out how it should be and change the commands in `main.py` in `online()` function.
 
 #### I got an error or having a problem with this.
 [Create an issue](https://github.com/s0md3v/dump/issues/new)
